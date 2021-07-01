@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Dashboard from './containers/Dashboard/Dashboard';
-import LoginPage from './containers/Login/Login';
+import Dashboard from './features/Dashboard/Dashboard';
+import LoginPage from './features/Login/Login';
 
 const App: React.FC = () => {
     return (
