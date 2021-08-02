@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Dashboard from './features/Dashboard/Dashboard';
-import LoginPage from './features/Login/Login';
+import Dashboard from './pages/Dashboard/Dashboard';
+import LoginPage from './pages/Login/Login';
+import {Layout} from './components/Layout/Layout';
 
 const App: React.FC = () => {
     return (
-        <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/login" component={LoginPage} />
-        </Switch>
+        <Layout>
+            <Switch>
+                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/login" component={LoginPage} />
+            </Switch>
+        </Layout>
     );
 };
 
