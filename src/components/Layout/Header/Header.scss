@@ -1,0 +1,31 @@
+@import '../../../shared/styles/vars';
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/mixins';
+
+.Header {
+  height: $header-height;
+  background-color: $main-background-color;
+}
+
+.Header-content {
+  @include main-horizontal-margin;
+
+  border-bottom: 1px solid $border-color;
+  height: inherit;
+  background-color: $main-background-color;
+  color: $header-content-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    &_up {
+      color: #000000;;
+    }
+  }
+}

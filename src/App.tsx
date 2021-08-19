@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Dashboard from './pages/Dashboard/Dashboard';
 import LoginPage from './pages/Login/Login';
-import {Layout} from './components/Layout/Layout';
+import Layout from './components/Layout/Layout';
 
 const App: React.FC = () => {
     return (

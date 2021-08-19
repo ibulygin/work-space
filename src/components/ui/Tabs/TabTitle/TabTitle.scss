@@ -1,0 +1,33 @@
+@import '../../../../shared/styles/vars.scss';
+@import '../../../../shared/styles/colors.scss';
+
+.Tab {
+    list-style-type: none;
+
+
+    &__button {
+        display: block;
+        height: $header-height;
+        background-color: $tab-Background;
+        color: $header-content-color;
+        outline: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        border: none;
+        position: relative;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .active {
+        box-shadow: 0 4px 0 $header-content-color;
+    }
+}
+
+@keyframes border-button {
+    0% {opacity: 0}
+    25% {opacity: .25}
+    50% { opacity: .50}
+    75% { opacity: .75}
+    100% { opacity: 1}
+}

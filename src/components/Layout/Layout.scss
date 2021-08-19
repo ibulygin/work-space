@@ -1,0 +1,7 @@
+@import '../../shared/styles/mixins';
+
+.Main {
+  @include main-horizontal-margin;
+
+  height: 100vh;
+}

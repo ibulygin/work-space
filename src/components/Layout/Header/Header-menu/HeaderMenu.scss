@@ -1,0 +1,19 @@
+@import '../../../../shared/styles/vars';
+@import '../../../../shared/styles/colors';
+
+.Header-menu {
+    font-size: $font-size;
+    min-width: 200px;
+    flex-basis: 320px;
+    margin: 0 10px;
+    height: inherit;
+}
+
+@media (max-width: 620px) {
+    .Header-menu {
+        font-size: $font-size;
+        min-width: 200px;
+        flex-basis: 200px;
+        margin: 0 10px;
+    }
+}
