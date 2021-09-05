@@ -1,26 +1,25 @@
-import React, { useCallback } from 'react';
+import React, {useCallback} from 'react';
 import {getCssClasses} from '../../../../utils/className';
+import { ITab } from '../interfaces/tabs-interfaces';
 import './TabTitle.scss';
 
 type Props = {
-    name: string,
-    title: string,
-    setSelectedTab: (name: string) => void,
-    isTabSelected: boolean,
+    tab: ITab;
+    setSelectedTab: (tab: ITab) => void;
+    isTabSelected: boolean;
 };
 
-const TabView: React.FC<Props> = ({title, setSelectedTab, name, isTabSelected}) => {
-    const onClick = useCallback(
-        () => {
-            setSelectedTab(name);
-        },
-        [name, setSelectedTab],
-    );
+const TabView: React.FC<Props> = ({tab, setSelectedTab, isTabSelected}) => {
+    const onClick = useCallback(() => {
+        setSelectedTab(tab);
+    }, [tab.name, setSelectedTab]);
     const className = getCssClasses(['Tab__button', {className: 'active', isUsing: isTabSelected}]);
 
     return (
         <li className="Tab">
-            <button className={className} onClick={onClick}>{title}</button>
+            <button className={className} onClick={onClick}>
+                {tab.title}
+            </button>
         </li>
     );
 };

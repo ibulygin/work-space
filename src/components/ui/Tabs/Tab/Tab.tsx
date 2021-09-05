@@ -1,12 +1,13 @@
 import React from 'react';
+import { ITab } from '../interfaces/tabs-interfaces';
 import './Tab.scss';
 
 type Props = {
-    name: string
+    tab: ITab
 };
 
-const Tab: React.FC<Props> = ({children}) => { 
-    return (<div>{children}</div>);
+const Tab: React.FC<Props> = ({tab: {title}}) => {
+    return <div>{title}</div>;
 };
 
 export default Tab;

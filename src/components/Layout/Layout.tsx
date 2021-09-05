@@ -3,12 +3,10 @@ import Header from './Header/Header';
 import './Layout.scss';
 
 const Layout: React.FC = (props) => {
-    return(
+    return (
         <Fragment>
             <Header />
-            <main className="Main">
-                {props.children}
-            </main>
+            <main className="Main">{props.children}</main>
         </Fragment>
     );
 };

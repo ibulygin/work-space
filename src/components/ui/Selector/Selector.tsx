@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Selector: React.FC = () => {
-    return (
-        <div>selector</div>
-    )
-}
+    return <div>selector</div>;
+};
 
-export default Selector
+export default Selector;

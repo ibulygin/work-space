@@ -1,30 +1,30 @@
 import React, {ReactElement, useEffect, useState} from 'react';
+import { ITab } from '../interfaces/tabs-interfaces';
 import TabView from '../TabTitle/TabView';
-import  './Tabs.scss';
+import './Tabs.scss';
 
 type Props = {
-    children: ReactElement[],
-    onTabChange: (name: string) => void,
+    children: ReactElement[];
+    onTabChange: (tab: ITab) => void;
 };
 
 const Tabs: React.FC<Props> = ({children, onTabChange}) => {
-    // TODO children[0].props.name не красиво
-    const [selectedTab, setSelectedTab] = useState(children[0].props.name);
+    const tabs = children.map((item) => item.props);
+    const [selectedTab, setSelectedTab] = useState<ITab>(tabs[0]);
 
     useEffect(() => onTabChange(selectedTab));
 
     return (
         <ul className="Tabs">
             {children.map((item) => {
-                const {name, children} = item.props;
+                const {tab} = item.props;
 
                 return (
-                    <TabView 
-                        key={name}
-                        title={children}
-                        name={name}
+                    <TabView
+                        key={tab.name}
+                        tab={tab}
                         setSelectedTab={setSelectedTab}
-                        isTabSelected={selectedTab === name}
+                        isTabSelected={selectedTab === tab}
                     />
                 );
             })}
