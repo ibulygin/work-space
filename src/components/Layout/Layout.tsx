@@ -4,10 +4,10 @@ import './Layout.scss';
 
 const Layout: React.FC = (props) => {
     return (
-        <Fragment>
+        <section className="app">
             <Header />
             <main className="Main">{props.children}</main>
-        </Fragment>
+        </section>
     );
 };
 

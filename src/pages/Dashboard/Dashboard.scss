@@ -1,0 +1,12 @@
+.dashboard {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    &__name {
+        padding: 0;
+        margin: 0;
+    }
+}
